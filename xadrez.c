@@ -8,8 +8,8 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 int Bispo;
-int Torre;
-int Rainha;
+int Torre = 1;
+int Rainha = 1;
 int escolha;
 
 do {
@@ -38,9 +38,10 @@ do {
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
         case 2:
             printf("Movimentos da Torre\n");
-            for(Torre = 1 ; Torre <= 5 ; Torre++)
+            while(Torre <= 5)
             {
                 printf("Direita\n"); // a direção do movimento
+                Torre++;
             }
             break;
 
@@ -48,10 +49,10 @@ do {
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
         case 3:
             printf("Movimentos da Rainha\n");
-            for(Rainha = 1 ; Rainha <= 8 ; Rainha++)
-            {
+            do{
                 printf("Esquerda\n"); // a direção do movimento
-            }
+                Rainha++;
+            } while(Rainha <= 8);
             break;
         default:
             printf("Opção inválida!\n");
